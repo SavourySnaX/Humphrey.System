@@ -1,0 +1,104 @@
+
+using System::Types
+
+# Atomics
+
+Intrinsic_MemoryOrder:UInt32
+{
+  Relaxed:=0
+  Consume:=1
+  Acquire:=2
+  Release:=3
+  AcquireRelease:=4
+  SequentiallyConsistent:=5
+}
+
+[BUILT_IN]
+Intrinsic_AtomicLoadExplicit:(ptr:*UInt64,order:Intrinsic_MemoryOrder)(out:UInt64)
+
+[BUILT_IN]
+Intrinsic_AtomicStoreExplicit:(ptr:*UInt64,val:UInt64,order:Intrinsic_MemoryOrder)()
+
+### Vector Intrinsics (Uses anonymoous structs to allow matching any named struct of the correct layout)
+
+[BUILT_IN]
+Intrinsic_Vec2FAdd:(a:{x,y:fp32},b:{x,y:fp32})(result:{x,y:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec2FSub:(a:{x,y:fp32},b:{x,y:fp32})(result:{x,y:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec2FMul:(a:{x,y:fp32},b:{x,y:fp32})(result:{x,y:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec2FDiv:(a:{x,y:fp32},b:{x,y:fp32})(result:{x,y:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec2FDot:(a:{x,y:fp32},b:{x,y:fp32})(result:fp32)
+
+[BUILT_IN]
+Intrinsic_Vec2FFloor:(a:{x,y:fp32})(result:{x,y:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec2FMin:(a:{x,y:fp32},b:{x,y:fp32})(result:{x,y:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec2FMax:(a:{x,y:fp32},b:{x,y:fp32})(result:{x,y:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec2FAbs:(a:{x,y:fp32})(result:{x,y:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec3FAdd:(a:{x,y,z:fp32},b:{x,y,z:fp32})(result:{x,y,z:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec3FSub:(a:{x,y,z:fp32},b:{x,y,z:fp32})(result:{x,y,z:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec3FMul:(a:{x,y,z:fp32},b:{x,y,z:fp32})(result:{x,y,z:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec3FDiv:(a:{x,y,z:fp32},b:{x,y,z:fp32})(result:{x,y,z:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec3FDot:(a:{x,y,z:fp32},b:{x,y,z:fp32})(result:fp32)
+
+[BUILT_IN]
+Intrinsic_Vec3FFloor:(a:{x,y,z:fp32})(result:{x,y,z:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec3FMin:(a:{x,y,z:fp32},b:{x,y,z:fp32})(result:{x,y,z:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec3FMax:(a:{x,y,z:fp32},b:{x,y,z:fp32})(result:{x,y,z:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec3FAbs:(a:{x,y,z:fp32})(result:{x,y,z:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec4FAdd:(a:{x,y,z,w:fp32},b:{x,y,z,w:fp32})(result:{x,y,z,w:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec4FSub:(a:{x,y,z,w:fp32},b:{x,y,z,w:fp32})(result:{x,y,z,w:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec4FMul:(a:{x,y,z,w:fp32},b:{x,y,z,w:fp32})(result:{x,y,z,w:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec4FDiv:(a:{x,y,z,w:fp32},b:{x,y,z,w:fp32})(result:{x,y,z,w:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec4FDot:(a:{x,y,z,w:fp32},b:{x,y,z,w:fp32})(result:fp32)
+
+[BUILT_IN]
+Intrinsic_Vec4FFloor:(a:{x,y,z,w:fp32})(result:{x,y,z,w:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec4FMin:(a:{x,y,z,w:fp32},b:{x,y,z,w:fp32})(result:{x,y,z,w:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec4FMax:(a:{x,y,z,w:fp32},b:{x,y,z,w:fp32})(result:{x,y,z,w:fp32})
+
+[BUILT_IN]
+Intrinsic_Vec4FAbs:(a:{x,y,z,w:fp32})(result:{x,y,z,w:fp32})
+
