@@ -8,6 +8,12 @@ UInt16 : [16]bit
 UInt32 : [32]bit
 UInt64 : [64]bit
 
+Boolean : bit
+{
+    True  := 1
+    False := 0
+}
+
 MemorySizeOf:(type:_)(size:UInt64)=
 {
     ptr:=&type;
